@@ -11,13 +11,13 @@ namespace StarChart.Controllers
     [ApiController]
     public class CelestialObjectController : ControllerBase
     {
-
         private readonly ApplicationDbContext _context;
 
         public CelestialObjectController(ApplicationDbContext context)
         {
             _context = context;
         }
+
         [HttpGet("{id:int}")]
         public IActionResult GetById(int id)
         {
@@ -51,4 +51,5 @@ namespace StarChart.Controllers
             }
             return Ok(celestialObjects);
         }
-    } }
+    }
+}
